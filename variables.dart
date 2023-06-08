@@ -32,12 +32,34 @@ void main() {
   print('${name1.runtimeType} ${name2.runtimeType} ${name3.runtimeType}');
 
   print(double.parse(price.toString()).round() + age);
+
+  //Null Safety - Dart no permite variables de valor null
+
+  String? animal; // Nullable type. Can be `null` or string.
+  late String animal1; // Non-nullable type. Cannot be `null` but can be string.
+
+  //Default Value
+  int weLikeToCount = 1;
+
+  const int i = 1;
+
+  int? lineCount;
+  assert(lineCount == null);
+  // interrupe la ejecucion normal si alguna declcondicion boleana es falsa
+  print(lineCount);
+
+  countLines(i) {
+    for (int i = 1; i < 11; i++) {
+      print('Numero: $i');
+      assert(i < 11);
+    }
+  }
+
+  if (weLikeToCount == 0) {
+    lineCount = countLines(i);
+  } else {
+    lineCount = 0;
+  }
+
+  print(lineCount);
 }
-
-//Null Safety - Dart no permite variables de valor null
-
-String? animal; // Nullable type. Can be `null` or string.
-late String animal1; // Non-nullable type. Cannot be `null` but can be string.
-
-
-
