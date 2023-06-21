@@ -1,31 +1,31 @@
-var name = 'Voyager I';
-var year = 1977;
-var antennaDiameter = 3.7;
-var flybyOnjects = ['Jupiter', 'Saturn', 'Uranus', 'Neptune'];
-var image = {
-  'tags': ['saturn'],
-  'url': '//path/to/saturn.jpg'
-};
-
-// aunque la variable almacene un tipo de referencia como string, puede cambiar ese tipo especificandolo
-// si un objeto no esta restringido aun solo tipo, se especifica Object como tipo o dinamic si es necesario
-
-Object name1 = 'Bob';
-
-dynamic name2 = 'Bob';
-
-// pero tambia se puede declarar explicitamente el tipo que se inferirá
-String name3 = 'Bob';
-
-// Otras variables
-var Name = '';
-final int age = 10; // final variable que solo se puede establecer una vez
-const double price = 20.0; // const constante en un tiempo de compilación
-late String aux; // late despues le va asignar un valor
-bool isOpen = false;
-List numbersList = [1, 2, 3, 4];
-
 void main() {
+  var name = 'Voyager I';
+  var year = 1977;
+  var antennaDiameter = 3.7;
+  var flybyOnjects = ['Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+  var image = {
+    'tags': ['saturn'],
+    'url': '//path/to/saturn.jpg'
+  };
+
+  // aunque la variable almacene un tipo de referencia como string, puede cambiar ese tipo especificandolo
+  // si un objeto no esta restringido aun solo tipo, se especifica Object como tipo o dinamic si es necesario
+
+  Object name1 = 'Bob';
+
+  dynamic name2 = 'Bob';
+
+  // pero tambia se puede declarar explicitamente el tipo que se inferirá
+  String name3 = 'Bob';
+
+  // Otras variables
+  var Name = '';
+  final int age = 10; // final variable que solo se puede establecer una vez
+  const double price = 20.0; // const constante en un tiempo de compilación
+  late String aux; // late despues le va asignar un valor
+  bool isOpen = false;
+  List numbersList = [1, 2, 3, 4];
+
   print(
       'the satellite ${name} was created in ${year}, its antenna has a diameter of ${antennaDiameter}, He traveled through several planets as: ${flybyOnjects}');
 
@@ -62,4 +62,17 @@ void main() {
   }
 
   print(lineCount);
+
+  // Constantes
+
+  final myFinal = "Mi propiedad final";
+  // myFinal = "Mi nueva propiedad final"; Error
+  var myInt = 6;
+  final myFinalInt = myInt;
+  print(myFinalInt);
+
+  const myConst = "Mi propiedad constante";
+  // myConst = "Mi nueva propiedad constante"; Error
+  var myDouble = 6.0;
+  // const myConstDouble = myDouble; Error
 }
