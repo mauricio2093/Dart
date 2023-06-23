@@ -107,4 +107,11 @@ void main() {
   // myConst = "Mi nueva propiedad constante"; Error
   var myDouble = 6.0;
   // const myConstDouble = myDouble; Error
+
+  //valor opcional
+  String? myOptionalString;
+  print(myOptionalString);
+
+  myOptionalString = "Valor no nulo";
+  print(myOptionalString);
 }
