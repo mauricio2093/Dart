@@ -27,4 +27,25 @@ void main() {
   // ForEach
   var collection = [1, 2, 3];
   collection.forEach(print);
+
+  // Flujo de control
+  var myList = [
+    "mauricio",
+    "cadena",
+    "@mauricio2093",
+    "cadena",
+  ];
+  for (final name in myList) {
+    print("${name}");
+  }
+
+  for (int i = 0; i < myList.length; i++) {
+    print("${myList[i]} [${i}]");
+  }
+
+  var myCounter = 0;
+  while (myCounter <= myInt) {
+    print(myCounter);
+    myCounter++;
+  }
 }

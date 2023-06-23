@@ -25,6 +25,14 @@ void main() {
   late String aux; // late despues le va asignar un valor
   bool isOpen = false;
   List numbersList = [1, 2, 3, 4];
+  var myList = [
+    "mauricio",
+    "cadena",
+    "@mauricio2093",
+    "cadenna",
+  ];
+  print(myList);
+  print(myList[1]);
 
   print(
       'the satellite ${name} was created in ${year}, its antenna has a diameter of ${antennaDiameter}, He traveled through several planets as: ${flybyOnjects}');
@@ -32,6 +40,30 @@ void main() {
   print('${name1.runtimeType} ${name2.runtimeType} ${name3.runtimeType}');
 
   print(double.parse(price.toString()).round() + age);
+
+  // Sets
+  var mySet = {
+    "mauricio",
+    "cadena",
+    "@mauricio2093",
+    "cadena",
+  };
+
+  print(mySet);
+
+  // Maps
+  var myMaps = {
+    "Mauricio": 29,
+    "Lina": 31,
+  };
+  print(myMaps);
+  print(myMaps["Mauricio"]);
+
+  var myMap = Map<String, int>();
+  myMap["Mauricio"] = 29;
+  myMap["Lina"] = 31;
+
+  print(myMap["Lina"]);
 
   //Null Safety - Dart no permite variables de valor null
 
