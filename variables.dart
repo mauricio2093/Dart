@@ -114,4 +114,18 @@ void main() {
 
   myOptionalString = "Valor no nulo";
   print(myOptionalString);
+
+  // Tipos de Variables
+  final String pokemon = 'Ditto';
+  final int hp = 100;
+  final bool isAlive = true;
+  final List abilities = <String>['impostor'];
+
+  //String Multiline
+  print("""
+  $pokemon 
+  $hp 
+  $isAlive
+  $abilities
+  """);
 }
