@@ -97,6 +97,7 @@ void main() {
   var num = 2;
   num *= 3;
   assert(a == 6);
+  print(num);
 
   // Operadores logicos
   var col = 0;
