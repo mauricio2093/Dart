@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 void main() {
   var name = 'Voyager I';
   var year = 1977;
@@ -182,4 +180,25 @@ void main() {
 
   print("Front ${pokemons2['sprites'][1]}");
   print("Backend ${pokemons2['sprites'][2]}");
+
+  final numbers = [1, 2, 3, 4, 5, 6, 5, 7, 8, 5, 4];
+  print('list original $numbers');
+  print('length original ${numbers.length}');
+  print('index 0t original ${numbers[0]}');
+  print('first original ${numbers.first}');
+  print('last original ${numbers.last}');
+  print('reverse original ${numbers.reversed}');
+
+  final reversedNum = numbers.reversed; // iterable
+  print('iterable $reversedNum');
+  print('List ${reversedNum.toList()}');
+  print('Set ${reversedNum.toSet()}');
+  print('Set ${reversedNum.toSet().toList()}');
+  print('Is Empty ? ${reversedNum.isEmpty}');
+  print('Is not Empty ? ${reversedNum.isNotEmpty}');
+
+  final numbersGreaterThan5 = numbers.where((num) {
+    return num >= 3;
+  });
+  print('>= 3 iterable $numbersGreaterThan5');
 }
