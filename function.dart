@@ -10,7 +10,10 @@ void main() {
   print(greetEveryone());
 
   print('sum 2 numbers ${addTwoNumbers(73)}');
-  print('sum 3 numbers ${addThreeNumbers(73, 9)}');
+
+  print('sum 3 numbers ${addThreeNumbers(73, 9, 1)}');
+
+  print(greetPerson(name: 'Mauricio'));
 }
 
 void myFuntion() {
@@ -34,4 +37,7 @@ int addTwoNumbers(int a, [int? b]) {
   return a + b;
 }
 
-int addThreeNumbers(int a, [int b = 0]) => a + b + 23;
+int addThreeNumbers(int a, [int b = 0, int c = 1]) => a + b + c;
+
+String greetPerson({required String? name, String? message = 'Hola'}) =>
+    '$message, $name';
