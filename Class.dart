@@ -24,7 +24,9 @@ void main() {
   final automobile = Car.fromMap(rawJson);
   print(automobile.infoCar());
 
-  //final windPlant
+  final windPlant = WindPlant(initialEnergy: 90);
+
+  print('wind: ${chargePhone(windPlant)}');
 }
 
 class MyClass {
@@ -86,6 +88,14 @@ class Car {
 
 // Clases abstratas y enumeraciones
 
+double chargePhone(EnergyPlant plant) {
+  if (plant.energyLeft < 10) {
+    throw Exception('Not enough energy');
+  }
+
+  return plant.energyLeft - 10;
+}
+
 enum PlantType { nuclear, wind, water }
 
 abstract class EnergyPlant {
@@ -101,4 +111,14 @@ abstract class EnergyPlant {
 }
 
 // Extends o Implements
-class WindPlant {}
+
+class WindPlant extends EnergyPlant {
+  //herencia
+  WindPlant({required double initialEnergy})
+      : super(energyLeft: initialEnergy, type: PlantType.wind);
+
+  @override
+  void consumeEnergy(double amount) {
+    energyLeft -= amount;
+  }
+}
