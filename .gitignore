@@ -3,7 +3,7 @@
 
 ### Dart ###
 # See https://www.dartlang.org/guides/libraries/private-files
-
+.vscode
 test.dart
 test1.dart
 HelloWorld.dart
